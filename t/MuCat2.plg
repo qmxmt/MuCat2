@@ -1,0 +1,113 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: MuCat - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "d:\TEMP\RSP238.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /I "c:\gci\include" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /Fo"Debug/" /Fd"Debug/" /FD /c 
+"\\Mucat2\VS Projects\MUCAT\842.cpp"
+]
+Creating command line "cl.exe @d:\TEMP\RSP238.tmp" 
+Creating temporary file "d:\TEMP\RSP239.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /I "c:\gci\include" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /Fp"Debug/MuCat2.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /c 
+"\\Mucat2\VS Projects\MUCAT\BinDialog.cpp"
+"\\Mucat2\VS Projects\MUCAT\Camera.cpp"
+"\\Mucat2\VS Projects\MUCAT\ChildFrm.cpp"
+"\\Mucat2\VS Projects\MUCAT\DimDialog.cpp"
+"\\Mucat2\VS Projects\MUCAT\DurationDialog.cpp"
+"\\Mucat2\VS Projects\MUCAT\FinishTime.cpp"
+"\\Mucat2\VS Projects\MUCAT\GainDialog.cpp"
+"\\Mucat2\VS Projects\MUCAT\Geometry.cpp"
+"\\Mucat2\VS Projects\MUCAT\LOG.CPP"
+"\\Mucat2\VS Projects\MUCAT\MagDialog.cpp"
+"\\Mucat2\VS Projects\MUCAT\MainFrm.cpp"
+"\\Mucat2\VS Projects\MUCAT\MuCat2.cpp"
+"\\Mucat2\VS Projects\MUCAT\MuCat2Doc.cpp"
+"\\Mucat2\VS Projects\MUCAT\MuCat2View.cpp"
+"\\Mucat2\VS Projects\MUCAT\PauseDialog.cpp"
+"\\Mucat2\VS Projects\MUCAT\PositionDialog.cpp"
+"\\Mucat2\VS Projects\MUCAT\SpecDialog.cpp"
+"\\Mucat2\VS Projects\MUCAT\Splash.cpp"
+"\\Mucat2\VS Projects\MUCAT\StopDialog.cpp"
+"\\Mucat2\VS Projects\MUCAT\XrayDialog.cpp"
+"\\Mucat2\VS Projects\MUCAT\ZoomDialog.cpp"
+]
+Creating command line "cl.exe @d:\TEMP\RSP239.tmp" 
+Creating temporary file "d:\TEMP\RSP23A.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /I "c:\gci\include" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /Fp"Debug/MuCat2.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /c 
+"\\Mucat2\VS Projects\MUCAT\StdAfx.cpp"
+]
+Creating command line "cl.exe @d:\TEMP\RSP23A.tmp" 
+Creating temporary file "d:\TEMP\RSP23B.tmp" with contents
+[
+c:\gci\lib\gci32.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/MuCat2.pdb" /debug /machine:I386 /out:"Debug/MuCat2.exe" /pdbtype:sept 
+".\Debug\842.obj"
+".\Debug\BinDialog.obj"
+".\Debug\Camera.obj"
+".\Debug\ChildFrm.obj"
+".\Debug\DimDialog.obj"
+".\Debug\DurationDialog.obj"
+".\Debug\FinishTime.obj"
+".\Debug\GainDialog.obj"
+".\Debug\Geometry.obj"
+".\Debug\LOG.OBJ"
+".\Debug\MagDialog.obj"
+".\Debug\MainFrm.obj"
+".\Debug\MuCat2.obj"
+".\Debug\MuCat2Doc.obj"
+".\Debug\MuCat2View.obj"
+".\Debug\PauseDialog.obj"
+".\Debug\PositionDialog.obj"
+".\Debug\SpecDialog.obj"
+".\Debug\Splash.obj"
+".\Debug\StdAfx.obj"
+".\Debug\StopDialog.obj"
+".\Debug\XrayDialog.obj"
+".\Debug\ZoomDialog.obj"
+]
+Creating command line "link.exe @d:\TEMP\RSP23B.tmp"
+<h3>Output Window</h3>
+Compiling...
+StdAfx.cpp
+Compiling...
+842.cpp
+Compiling...
+BinDialog.cpp
+Camera.cpp
+ChildFrm.cpp
+DimDialog.cpp
+DurationDialog.cpp
+FinishTime.cpp
+GainDialog.cpp
+Geometry.cpp
+LOG.CPP
+MagDialog.cpp
+MainFrm.cpp
+MuCat2.cpp
+MuCat2Doc.cpp
+MuCat2View.cpp
+PauseDialog.cpp
+PositionDialog.cpp
+SpecDialog.cpp
+Splash.cpp
+StopDialog.cpp
+XrayDialog.cpp
+Generating Code...
+Compiling...
+ZoomDialog.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+MuCat2.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

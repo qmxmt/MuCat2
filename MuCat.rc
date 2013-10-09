@@ -1,0 +1,935 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\MuCat.ico"
+IDR_MUCATTYPE           ICON                    "res\\MuCatDoc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_FILE_PRINT
+    SEPARATOR
+    BUTTON      ID_SHUTTERBUTTON
+    BUTTON      ID_SCAN
+    BUTTON      ID_INITFOCUS
+    BUTTON      ID_STILL
+    BUTTON      ID_RECORD
+    SEPARATOR
+    BUTTON      ID_AUTOSCALE
+    BUTTON      ID_BRIGHT_DOWN
+    BUTTON      ID_BRIGHT_UP
+    BUTTON      ID_CONTRAST_DOWN
+    BUTTON      ID_CONTRAST_UP
+    SEPARATOR
+    BUTTON      ID_POSITION
+    BUTTON      ID_BUTTONDIM
+    SEPARATOR
+    BUTTON      ID_BUTTONSHARPNESS
+    BUTTON      ID_BUTTONCENTRE
+    BUTTON      ID_APP_ABOUT
+    BUTTON      ID_CALIBRATE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM SEPARATOR
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About MuCat...",             ID_APP_ABOUT
+    END
+END
+
+IDR_MUCATTYPE MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "&Specimen",                   ID_EDIT_SPEC
+        MENUITEM "&X-ray",                      ID_EDIT_XRAY
+        MENUITEM "&Geometry",                   ID_EDIT_GEOMETRY
+        MENUITEM SEPARATOR
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM "&Zoom",                       ID_VIEW_ZOOM
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&New Window",                 ID_WINDOW_NEW
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "&Tile",                       ID_WINDOW_TILE_HORZ
+        MENUITEM "&Arrange Icons",              ID_WINDOW_ARRANGE
+    END
+    POPUP "&Parameters"
+    BEGIN
+        MENUITEM "&Binning",                    ID_PARAMETER_BIN
+        MENUITEM "&Dimensions",                 ID_PARAMETER_DIM
+        MENUITEM "&Exposure",                   ID_PARAMETER_EXP
+        MENUITEM "&Magnification",              ID_PARAMETER_MAG
+        MENUITEM "&Gain",                       IDD_PARAMETER_GAIN
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About MuCat...",             ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "Q",            ID_STOP,                VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG  0, 0, 152, 56
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About MuCat"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "MuCat Version 1.0",IDC_STATIC,36,7,77,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 1998, ",IDC_STATIC,36,18,67,9
+    DEFPUSHBUTTON   "OK",IDOK,113,7,32,14,WS_GROUP
+    LTEXT           "Queen Mary and Westfield College",IDC_STATIC,36,40,109,9
+    LTEXT           "Dr Graham R Davis",IDC_STATIC,36,29,104,8
+END
+
+IDD_GEOMETRYDIALOG DIALOG  0, 0, 142, 90
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Geometry"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Pixel Size in microns",IDC_STATIC,7,12,64,8
+    EDITTEXT        IDC_GEOMETRYPIXELSIZE,85,7,40,13,ES_AUTOHSCROLL
+    LTEXT           "Source distance in cm",IDC_STATIC,7,32,70,8
+    EDITTEXT        IDC_GEOMETRYDISTANCE,85,28,40,12,ES_AUTOHSCROLL
+    LTEXT           "Gradient",IDC_STATIC,7,52,27,8
+    EDITTEXT        IDC_GEOMETRYGRADIENT,85,48,40,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,14,69,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,85,69,50,14
+END
+
+IDD_PAUSEDIALOG DIALOG  0, 0, 134, 96
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Pause after I zero measurement"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,31,55,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,31,78,50,14
+    CONTROL         "Pause for specimen placement",IDC_CHECKPAUSE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,7,125,10
+    CONTROL         "Disable Rotation",IDC_KILLTHETA,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,20,66,10
+    CONTROL         "Disable Elevation",IDC_KILLZ,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,35,69,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "FileDescription", "MuCat MFC Application"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "MuCat"
+            VALUE "LegalCopyright", "Copyright (C) 1998"
+            VALUE "OriginalFilename", "MuCat.EXE"
+            VALUE "ProductName", "MuCat Application"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 145
+        VERTGUIDE, 36
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 49
+    END
+
+    IDD_GEOMETRYDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 135
+        VERTGUIDE, 64
+        VERTGUIDE, 85
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+        HORZGUIDE, 20
+        HORZGUIDE, 40
+        HORZGUIDE, 60
+    END
+
+    IDD_PAUSEDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 132
+        VERTGUIDE, 31
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 92
+        HORZGUIDE, 16
+        HORZGUIDE, 30
+        HORZGUIDE, 45
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "MuCat"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "MuCat"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_NEW           "Open another window for the active document\nNew Window"
+    ID_WINDOW_ARRANGE       "Arrange icons at the bottom of the window\nArrange Icons"
+    ID_WINDOW_CASCADE       "Arrange windows so they overlap\nCascade Windows"
+    ID_WINDOW_TILE_HORZ     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_TILE_VERT     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+    AFX_IDS_MDICHILD        "Activate this window"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+    ID_INDICATOR_PROJ       "Projection 00:0000/000"
+    ID_INDICATOR_TEMP       "T = -00.0 C,  P = 00.00 Torr "
+    ID_INDICATOR_CURSOR     "X=-00.000  Y=-00.000"
+    ID_INDICATOR_PEPPER     "Pepper 00000"
+    ID_INDICATOR_DURATION   "0000 s"
+    ID_INDICATOR_MAX        "Int. 00000/00000"
+    ID_INDICATOR_FIN        "Fin: ddd hh:mm"
+    ID_INDICATOR_BIN        "Bin: 0"
+    ID_INDICATOR_SHARP      "Sharp = 00.00,   Centre = -0000.0 "
+END
+
+STRINGTABLE 
+BEGIN
+    ID_SCAN                 "Single scan\nScan"
+    ID_FOCUS                "Focus Centre"
+    ID_STILL                "Take Still Image\nStill"
+    ID_RECORD               "Record Data"
+    ID_PARAMETER_BIN        "Set binning factor"
+    ID_MULTISCAN            "Multiple Scan"
+    ID_EDIT_SPEC            "Specimen Details"
+    ID_EDIT_XRAY            "X-ray Settings"
+    ID_VIEW_ZOOM            "Zoom"
+    ID_INITFOCUS            "Focus on Centre\nFocus"
+    IDD_PARAMETER_GAIN      "Set camera gain"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_BRIGHT_UP            "Increase brightness\n+Bright"
+    ID_BRIGHT_DOWN          "Decrease brightness\n-Bright"
+    ID_CONTRAST_UP          "Increase contrast\n+Contrast"
+    ID_CONTRAST_DOWN        "Reduce contrast\n-Contrast"
+    ID_AUTOSCALE            "Auto grey scale\nAuto"
+    ID_POSITION             "Set Position"
+    ID_PARAMETER_DIM        "Set scan dimensions"
+    IDD_PARAMETER_SPEC      "Display/edit the specimen description"
+    ID_PARAMETER_MAG        "Lens magnification factor"
+    ID_PARAMETER_EXP        "Set exposure time for 1 CCD width transverse"
+    IDC_EDIT_GEOMETRY       "Set pixel size and distance"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_BUTTONDIM            "Set dimensions"
+    ID_BUTTONSHARPNESS      "Measure Sharpness"
+    ID_BUTTONCENTRE         "Find rod centre"
+    ID_SHUTTERBUTTON        "X-ray shutter"
+    ID_CALIBRATE            "Perform a 9 projection calibration"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON1               ICON                    "res\\icon1.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_SPLASH              BITMAP                  "Splsh16.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_BINDIALOG DIALOG  0, 0, 132, 52
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Bin Factor"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_BINEDIT,17,16,16,12,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_BINSPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ARROWKEYS,52,15,8,14
+    DEFPUSHBUTTON   "OK",IDOK,75,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,75,24,50,14
+END
+
+IDD_SPECDIALOG DIALOG  0, 0, 212, 121
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Specimen Details"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "User Inititals",IDC_STATIC,7,15,68,10
+    EDITTEXT        IDC_USER,82,15,122,12,ES_AUTOHSCROLL
+    LTEXT           "Specimen Owner",IDC_STATIC,7,35,68,10
+    EDITTEXT        IDC_OWNER,82,35,122,12,ES_AUTOHSCROLL
+    LTEXT           "Specimen description",IDC_STATIC,7,55,68,10
+    EDITTEXT        IDC_DESCRIPTION,82,55,122,12,ES_AUTOHSCROLL
+    LTEXT           "Comment",IDC_STATIC,7,75,68,10
+    EDITTEXT        IDC_COMMENT,82,75,122,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,40,95,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,95,50,14
+END
+
+IDD_XRAY_DIALOG DIALOG  0, 0, 124, 155
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "X-Ray Settings"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "X-ray Voltage (kV)",IDC_STATIC,7,13,68,10
+    EDITTEXT        IDC_VOLTAGE,75,13,42,12,ES_AUTOHSCROLL
+    LTEXT           "X-ray Current (mA)",IDC_STATIC,7,35,68,10
+    EDITTEXT        IDC_CURRENT,75,35,42,12,ES_AUTOHSCROLL
+    LTEXT           "Filter Thickness (mm)",IDC_STATIC,7,55,68,11
+    EDITTEXT        IDC_FILTER,75,55,42,12,ES_AUTOHSCROLL
+    LTEXT           "Calibration Issue",IDC_STATIC,7,75,68,10
+    EDITTEXT        IDC_ISSUE,75,75,42,12,ES_AUTOHSCROLL
+    LTEXT           "Pepper Threshold",IDC_STATIC,7,96,56,8
+    EDITTEXT        IDC_EDITPEPPER,75,95,42,12,ES_AUTOHSCROLL
+    CONTROL         "Pepper Elimination",IDC_PEPPERCHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,114,73,10
+    DEFPUSHBUTTON   "OK",IDOK,7,134,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,67,134,50,14
+END
+
+IDD_VIEWZOOM DIALOG  0, 0, 114, 85
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Zoom"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "25  %",IDC_ZOOM25,"Button",BS_AUTORADIOBUTTON,7,7,30,10
+    CONTROL         "33 %",IDC_ZOOM33,"Button",BS_AUTORADIOBUTTON,7,17,30,10
+    CONTROL         "50 %",IDC_ZOOM50,"Button",BS_AUTORADIOBUTTON,7,27,30,10
+    CONTROL         "100 %",IDC_ZOOM100,"Button",BS_AUTORADIOBUTTON,7,37,30,10
+    CONTROL         "200 %",IDC_ZOOM200,"Button",BS_AUTORADIOBUTTON,7,47,30,10
+    CONTROL         "300 %",IDC_ZOOM300,"Button",BS_AUTORADIOBUTTON,7,57,30,10
+    CONTROL         "400 %",IDC_ZOOM400,"Button",BS_AUTORADIOBUTTON,7,67,30,10
+    DEFPUSHBUTTON   "OK",IDOK,57,25,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,57,48,50,14
+END
+
+IDD_STOPDIALOG DIALOG  0, 0, 45, 35
+STYLE DS_SYSMODAL | DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | WS_CHILD | WS_VISIBLE | WS_CAPTION
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,7,31,21,BS_NOTIFY
+END
+
+IDD_GAINDIALOG DIALOGEX 0, 0, 137, 62
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Gain Control"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,80,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,80,30,50,14
+    LTEXT           "Attn",IDC_STATIC,7,15,26,10
+    EDITTEXT        IDC_GAINGAIN,33,14,12,12,ES_AUTOHSCROLL
+    CONTROL         "Spin3",IDC_GAINGAINSPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ARROWKEYS,57,12,11,17
+    LTEXT           "",IDC_GAINELECTRON,7,45,90,10
+END
+
+IDD_POSITIONDIALOG DIALOGEX 0, 0, 178, 117
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Position"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Rotation",IDC_STATIC,7,10,31,13
+    EDITTEXT        IDC_ROTATION,45,10,33,13,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_ROTATIONSPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ARROWKEYS | UDS_NOTHOUSANDS,90,10,10,13
+    LTEXT           "Elevation",IDC_STATIC,7,30,38,13
+    EDITTEXT        IDC_ELEVATION,45,30,33,13,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_ELEVATIONSPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ARROWKEYS | UDS_NOTHOUSANDS,90,30,10,13
+    LTEXT           "Translation",IDC_STATIC,7,50,38,13
+    EDITTEXT        IDC_TRANSLATION,45,50,33,13,ES_AUTOHSCROLL
+    CONTROL         "Spin2",IDC_TRANSLATIONSPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ARROWKEYS | UDS_HORZ | UDS_NOTHOUSANDS,90,50,17,13
+    DEFPUSHBUTTON   "OK",IDOK,121,16,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,121,43,50,14
+    EDITTEXT        IDC_POSDISTANCE,45,69,33,12,ES_AUTOHSCROLL
+    LTEXT           "Distance",IDC_STATIC,7,69,31,8
+    CONTROL         "",IDC_POSDISTANCESPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ARROWKEYS | UDS_HORZ | UDS_NOTHOUSANDS,90,69,17,12
+    LTEXT           " ",IDC_POSITIONPIXELSIZE,15,94,156,15
+END
+
+IDD_DIMDIALOG DIALOGEX 0, 0, 188, 181
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dimensions"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Height (Slices)",IDC_STATIC,7,15,47,10
+    EDITTEXT        IDC_DIMHEIGHT,70,15,32,12,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_DIMHEIGHTSPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ARROWKEYS | UDS_NOTHOUSANDS,112,15,8,14
+    LTEXT           "Scan length",IDC_STATIC,7,40,45,10
+    EDITTEXT        IDC_DIMLENGTH,70,40,32,12,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_DIMLENGTHSPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ARROWKEYS | UDS_NOTHOUSANDS,112,40,8,14
+    LTEXT           "No. Projections",IDC_STATIC,7,65,63,8
+    EDITTEXT        IDC_DIMPROJ,70,65,32,12,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_DIMPROJSPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ARROWKEYS | UDS_NOTHOUSANDS,112,65,10,14
+    LTEXT           "Number of Blocks",IDC_STATIC,7,93,63,8
+    EDITTEXT        IDC_DIMBLOCKS,70,90,32,12,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_DIMBLOCKSSPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ARROWKEYS | UDS_NOTHOUSANDS,112,90,10,14
+    LTEXT           """Slices"" per block",IDC_STATIC,7,117,63,8
+    EDITTEXT        IDC_DIMSHIFT,70,114,32,12,ES_AUTOHSCROLL
+    CONTROL         "Spin2",IDC_DIMSHIFTSPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ARROWKEYS,112,114,10,14
+    DEFPUSHBUTTON   "OK",IDOK,131,26,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,131,51,50,14
+    LTEXT           "",IDC_DIMMAXSLICES,7,163,139,11
+    LTEXT           "Frame Average",IDC_STATIC,7,137,63,8
+    EDITTEXT        IDC_DIMAV,70,135,32,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_DIMAVSPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ARROWKEYS,112,135,14,14
+    CONTROL         "Don't Round Projections",IDC_ROUNDCHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,156,93,10
+END
+
+IDD_MAGDIALOG DIALOG  0, 0, 133, 94
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Lens Magnification Factor"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Caution, this parameter is used to adjust the horizontal focus during TDI scanning.  Make a not of the old value before changing.",IDC_STATIC,7,7,119,32
+    EDITTEXT        IDC_PARAMETERMAG,7,50,46,13,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,64,50,46,14
+    PUSHBUTTON      "Cancel",IDCANCEL,64,73,46,14
+END
+
+IDD_PARAMETER_DURATION DIALOG  0, 0, 163, 72
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Exposure Duration"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Scan Duration One CCD Trasverse",IDC_STATIC,7,7,47,26
+    EDITTEXT        IDC_PARAMETER_DURATION,58,14,32,12,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_PARAMETERDURATIONSPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ARROWKEYS,98,14,8,14
+    LTEXT           "Still Duration",IDC_STATIC,7,52,44,12
+    EDITTEXT        IDC_PARAMETERSTILL,58,52,32,12,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_PARAMETERSTILLSPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ARROWKEYS,98,50,8,14
+    DEFPUSHBUTTON   "OK",IDOK,116,26,40,14
+    PUSHBUTTON      "Cancel",IDCANCEL,116,49,40,15
+END
+
+IDD_XRAYRESTART DIALOGEX 0, 0, 135, 62
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "X-rays off?"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,41,40,50,14
+    CONTROL         "Restart X-ray PC on completion",IDC_XRAYRESTART,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,7,116,10
+    CONTROL         "Wait 45 minutes",IDC_WAIT45,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,27,67,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_BINDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 125
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 45
+    END
+
+    IDD_SPECDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 204
+        VERTGUIDE, 75
+        VERTGUIDE, 82
+        VERTGUIDE, 203
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 114
+        HORZGUIDE, 15
+        HORZGUIDE, 25
+        HORZGUIDE, 35
+        HORZGUIDE, 45
+        HORZGUIDE, 55
+        HORZGUIDE, 65
+        HORZGUIDE, 75
+        HORZGUIDE, 85
+        HORZGUIDE, 95
+        HORZGUIDE, 109
+    END
+
+    IDD_XRAY_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 117
+        VERTGUIDE, 75
+        VERTGUIDE, 117
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 148
+        HORZGUIDE, 24
+        HORZGUIDE, 35
+        HORZGUIDE, 45
+        HORZGUIDE, 55
+        HORZGUIDE, 65
+        HORZGUIDE, 75
+        HORZGUIDE, 85
+        HORZGUIDE, 95
+        HORZGUIDE, 104
+        HORZGUIDE, 114
+        HORZGUIDE, 124
+        HORZGUIDE, 134
+    END
+
+    IDD_VIEWZOOM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 107
+        VERTGUIDE, 37
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 78
+        HORZGUIDE, 25
+        HORZGUIDE, 35
+        HORZGUIDE, 45
+        HORZGUIDE, 55
+        HORZGUIDE, 65
+        HORZGUIDE, 75
+    END
+
+    IDD_STOPDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 38
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 28
+    END
+
+    IDD_GAINDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 130
+        VERTGUIDE, 33
+        VERTGUIDE, 45
+        VERTGUIDE, 57
+        VERTGUIDE, 70
+        VERTGUIDE, 80
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+        HORZGUIDE, 20
+        HORZGUIDE, 30
+        HORZGUIDE, 45
+        HORZGUIDE, 55
+    END
+
+    IDD_POSITIONDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 171
+        VERTGUIDE, 45
+        VERTGUIDE, 78
+        VERTGUIDE, 90
+        VERTGUIDE, 100
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 81
+        HORZGUIDE, 10
+        HORZGUIDE, 23
+        HORZGUIDE, 30
+        HORZGUIDE, 43
+        HORZGUIDE, 50
+        HORZGUIDE, 63
+        HORZGUIDE, 69
+        HORZGUIDE, 81
+    END
+
+    IDD_DIMDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 181
+        VERTGUIDE, 70
+        VERTGUIDE, 102
+        VERTGUIDE, 112
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 174
+        HORZGUIDE, 15
+        HORZGUIDE, 25
+        HORZGUIDE, 40
+        HORZGUIDE, 50
+        HORZGUIDE, 65
+        HORZGUIDE, 75
+        HORZGUIDE, 90
+        HORZGUIDE, 101
+        HORZGUIDE, 114
+        HORZGUIDE, 125
+        HORZGUIDE, 137
+        HORZGUIDE, 149
+    END
+
+    IDD_MAGDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 126
+        VERTGUIDE, 64
+        VERTGUIDE, 110
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+        HORZGUIDE, 50
+    END
+
+    IDD_PARAMETER_DURATION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 156
+        VERTGUIDE, 58
+        VERTGUIDE, 90
+        VERTGUIDE, 98
+        VERTGUIDE, 116
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 64
+        HORZGUIDE, 14
+        HORZGUIDE, 24
+        HORZGUIDE, 40
+        HORZGUIDE, 52
+    END
+
+    IDD_XRAYRESTART, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 128
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif\r\n"
+    "#include ""res\\MuCat.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""afxprint.rc""       // printing/print preview resources\r\n"
+    "#endif\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif
+#include "res\MuCat.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "afxprint.rc"       // printing/print preview resources
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,113 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: MuCat - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "d:\TEMP\RSP20B.tmp" with contents
+[
+/nologo /MT /W3 /GX /O2 /I "c:\gci\include" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fo"Release/" /Fd"Release/" /FD /c 
+"\\Mucat2\VS Projects\MUCAT\842.cpp"
+]
+Creating command line "cl.exe @d:\TEMP\RSP20B.tmp" 
+Creating temporary file "d:\TEMP\RSP20C.tmp" with contents
+[
+/nologo /MT /W3 /GX /O2 /I "c:\gci\include" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/MuCat.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"\\Mucat2\VS Projects\MUCAT\BinDialog.cpp"
+"\\Mucat2\VS Projects\MUCAT\Camera.cpp"
+"\\Mucat2\VS Projects\MUCAT\ChildFrm.cpp"
+"\\Mucat2\VS Projects\MUCAT\DimDialog.cpp"
+"\\Mucat2\VS Projects\MUCAT\DurationDialog.cpp"
+"\\Mucat2\VS Projects\MUCAT\FinishTime.cpp"
+"\\Mucat2\VS Projects\MUCAT\GainDialog.cpp"
+"\\Mucat2\VS Projects\MUCAT\Geometry.cpp"
+"\\Mucat2\VS Projects\MUCAT\LOG.CPP"
+"\\Mucat2\VS Projects\MUCAT\MagDialog.cpp"
+"\\Mucat2\VS Projects\MUCAT\MainFrm.cpp"
+"\\Mucat2\VS Projects\MUCAT\PauseDialog.cpp"
+"\\Mucat2\VS Projects\MUCAT\PositionDialog.cpp"
+"\\Mucat2\VS Projects\MUCAT\SpecDialog.cpp"
+"\\Mucat2\VS Projects\MUCAT\Splash.cpp"
+"\\Mucat2\VS Projects\MUCAT\StopDialog.cpp"
+"\\Mucat2\VS Projects\MUCAT\XrayDialog.cpp"
+"\\Mucat2\VS Projects\MUCAT\ZoomDialog.cpp"
+"\\MUCAT2\VS PROJECTS\MUCAT\MuCat2Doc.cpp"
+"\\MUCAT2\VS PROJECTS\MUCAT\MuCat2View.cpp"
+"\\MUCAT2\VS PROJECTS\MUCAT\MuCat2.cpp"
+]
+Creating command line "cl.exe @d:\TEMP\RSP20C.tmp" 
+Creating temporary file "d:\TEMP\RSP20D.tmp" with contents
+[
+/nologo /MT /W3 /GX /O2 /I "c:\gci\include" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/MuCat.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"\\Mucat2\VS Projects\MUCAT\StdAfx.cpp"
+]
+Creating command line "cl.exe @d:\TEMP\RSP20D.tmp" 
+Creating temporary file "d:\TEMP\RSP20E.tmp" with contents
+[
+c:\gci\lib\gci32.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/MuCat.pdb" /machine:I386 /out:"Release/MuCat.exe" 
+".\Release\842.obj"
+".\Release\BinDialog.obj"
+".\Release\Camera.obj"
+".\Release\ChildFrm.obj"
+".\Release\DimDialog.obj"
+".\Release\DurationDialog.obj"
+".\Release\FinishTime.obj"
+".\Release\GainDialog.obj"
+".\Release\Geometry.obj"
+".\Release\LOG.OBJ"
+".\Release\MagDialog.obj"
+".\Release\MainFrm.obj"
+".\Release\PauseDialog.obj"
+".\Release\PositionDialog.obj"
+".\Release\SpecDialog.obj"
+".\Release\Splash.obj"
+".\Release\StdAfx.obj"
+".\Release\StopDialog.obj"
+".\Release\XrayDialog.obj"
+".\Release\ZoomDialog.obj"
+".\Release\MuCat2Doc.obj"
+".\Release\MuCat2View.obj"
+".\Release\MuCat2.obj"
+]
+Creating command line "link.exe @d:\TEMP\RSP20E.tmp"
+<h3>Output Window</h3>
+Compiling...
+StdAfx.cpp
+Compiling...
+842.cpp
+Compiling...
+BinDialog.cpp
+Camera.cpp
+ChildFrm.cpp
+DimDialog.cpp
+DurationDialog.cpp
+FinishTime.cpp
+GainDialog.cpp
+Geometry.cpp
+LOG.CPP
+MagDialog.cpp
+MainFrm.cpp
+PauseDialog.cpp
+PositionDialog.cpp
+SpecDialog.cpp
+Splash.cpp
+StopDialog.cpp
+XrayDialog.cpp
+ZoomDialog.cpp
+MuCat2Doc.cpp
+MuCat2View.cpp
+Generating Code...
+Compiling...
+MuCat2.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+MuCat.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

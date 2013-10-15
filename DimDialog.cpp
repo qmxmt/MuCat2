@@ -35,7 +35,7 @@ void CDimDialog::DoDataExchange(CDataExchange* pDX)
 	CDialog::DoDataExchange(pDX);
 	//{{AFX_DATA_MAP(CDimDialog)
 	DDX_Text(pDX, IDC_DIMHEIGHT, m_Height);
-	DDV_MinMaxInt(pDX, m_Height, 10, 2000);
+	DDV_MinMaxInt(pDX, m_Height, 10, m_MaxHeight);
 	DDX_Text(pDX, IDC_DIMLENGTH, m_ScanLength);
 	DDV_MinMaxInt(pDX, m_ScanLength, 32, 7000);
 	DDX_Text(pDX, IDC_DIMPROJ, m_NumProj);

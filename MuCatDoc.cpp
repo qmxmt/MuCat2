@@ -246,7 +246,7 @@ void CMuCatDoc::SetBin(int Bin)
 {
 	m_Bin = Bin;
 	WriteStatus(1,"Bin: %1d",m_Bin);
-	m_CCDBinnedHeight = m_NumActiveCols / m_Bin;
+	m_CCDBinnedHeight = m_NumActiveCols / m_Bin - TOPCROP;
 	if (m_Header.num_slices > m_CCDBinnedHeight)
 		m_Header.num_slices = m_CCDBinnedHeight;
 }
@@ -341,7 +341,7 @@ void CMuCatDoc::OnParameterDim()
 
 void CMuCatDoc::SetMaxHeight()
 {
-	m_CCDBinnedHeight = m_NumActiveCols/m_Bin;
+	m_CCDBinnedHeight = m_NumActiveCols/m_Bin -TOPCROP;
 }
 
 void CMuCatDoc::OnParameterMag() 

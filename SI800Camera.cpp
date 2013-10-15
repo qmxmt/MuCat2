@@ -1218,10 +1218,10 @@ void CSI800Camera::StillImage(float exposure, unsigned long ** image, int XSize,
 
 	NumRows = XSize * Bin;
 	Bin2 = Bin*Bin;
-	TDIBuffer = new unsigned short[NumRows * YSize * Bin];
+	TDIBuffer = new unsigned short[NumRows * (YSize + TOPCROP) * Bin];
 	TDIArray  = new unsigned short*[NumRows];
 	for (a=0; a<NumRows; ++a)
-		TDIArray[a] = &TDIBuffer[a*YSize*Bin];
+		TDIArray[a] = &TDIBuffer[a*(YSize + TOPCROP) *Bin];
 	Error = Camera.LoadReadoutParameters();
 	Error = Camera.LoadConfigurationParameters();
 	Camera.lpParameter->ExposureTime = (DWORD)exposure;

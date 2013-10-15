@@ -284,7 +284,7 @@ void CMuCatView::OnStill()
 	float CCDtemp = Camera.lpCamStatus->CCDTemperature*0.1-273.15;
 
 	m_XSize = pDoc->GetNumCCDRows()/Bin;
-	m_YSize = pDoc->GetNumCCDCols()/Bin;
+	m_YSize = pDoc->GetNumCCDCols()/Bin - TOPCROP;
 	CreateBitmap();
 	CreateCCDBuffer();
 	Camera.StillImage((float)(pDoc->GetStillExposure()*1000),m_CCDPixel, m_XSize, m_YSize, pDoc->GetBin());

@@ -15,6 +15,7 @@
 void Texit(char *Message);
 #define CCDPIXELSIZE 30
 #define VERTICAL_MAGNIFICATION 1.0
+#define TOPCROP       200
 
 #define PORT1OFFSET   80
 #define PORT2OFFSET   50

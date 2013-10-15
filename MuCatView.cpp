@@ -444,9 +444,13 @@ void CMuCatView::OnInitFocus()
 	pDoc->GetElevator()->Move(280000);
 	m_IsDark = TRUE;
 	OnScan();
+	GetParent()->GetParent()->UpdateWindow();
+	UpdateWindow();
 	m_IsDark = FALSE;
 	pDoc->GetElevator()->WaitForStop();
 	OnScan();
+	GetParent()->GetParent()->UpdateWindow();
+	UpdateWindow();
 	pDoc->GetElevator()->Move(pDoc->m_Header.z*(-2));
 
 	pDoc->m_Header.num_samples = oldXSize;
@@ -678,7 +682,7 @@ void CMuCatView::OnScan()
 	m_VerticalPosition = pDoc->GetElevation();
 	Bin = pDoc->GetBin();
 	m_XSize = pDoc->GetHeader()->num_samples+64;
-	m_YSize = pDoc->GetNumCCDCols()/Bin;
+	m_YSize = pDoc->GetNumCCDCols()/Bin - TOPCROP;
 	Camera.GetStatus();
 	float CCDtemp = Camera.lpCamStatus->CCDTemperature*0.1-273.15;
 

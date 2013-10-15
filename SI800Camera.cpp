@@ -942,10 +942,10 @@ int CSI800Camera::TDIReadout(C843 *pSlide, unsigned long ** image, int XSize, in
 	NumRows = XSize * Bin + 4;
 	//GetCCDSize(&CCDYSize, &CCDXSize);
 	Bin2 = Bin*Bin;
-	TDIBuffer = new unsigned short[NumRows * YSize * Bin];
+	TDIBuffer = new unsigned short[NumRows * (YSize + TOPCROP) * Bin];
 	TDIArray  = new unsigned short*[NumRows];
 	for (a=0; a<NumRows; ++a)
-		TDIArray[a] = &TDIBuffer[a*YSize*Bin];
+		TDIArray[a] = &TDIBuffer[a*(YSize + TOPCROP)*Bin];
 
 	Error = Camera.LoadReadoutParameters();
 	Error = Camera.LoadConfigurationParameters();

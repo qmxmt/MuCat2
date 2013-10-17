@@ -1030,7 +1030,7 @@ void CMuCatView::OnRecord()
 		pDoc->GetMagSlide()->Move(cal_posdistance*(2));
 		pDoc->GetMagSlide()->WaitForStop();
 		pDoc->GetTurntable()->Move(-cal_angle*1000);
-
+		pDoc->m_FewProj = true;	//we don't want to do another 9 projections after a one-shot calibraction
 		//record the projections
 		DataFile.Open(FileName,CFile::modeReadWrite);
 		DataFile.SeekToEnd();

@@ -89,7 +89,6 @@ CMuCatView::CMuCatView()
 	m_IsRecording = FALSE;
 	m_IsCalibrating = FALSE;
 	m_IsDark = FALSE;
-	m_CentreOffset = CENTRE_OFFSET;
 	m_mmUnits = TRUE;
 }
 
@@ -700,10 +699,10 @@ void CMuCatView::OnScan()
 	
 	//ScanStart += pDoc->GetHeader()->pepper;
 	
-	ScanStart += m_CentreOffset;
+	ScanStart += pDoc->m_CentreOffset;
 	if (ScanStart < -299500)
 		return;
-	ScanEnd += m_CentreOffset;
+	ScanEnd += pDoc->m_CentreOffset;
 	if (ScanEnd > 299500)
 		return;
 	FirstBreak = (double)ScanStart + 1500.0;
@@ -725,7 +724,7 @@ void CMuCatView::OnScan()
 			//pDoc->GetSlide()->SetVelocity((int)(pDoc->GetNumCCDRows()*PixelStep*1000 / pDoc->GetHeader()->exposure)); //DAVE  - note to self - this is where the magic happens.
 			unsigned int CCDROWS = pDoc->GetNumCCDRows();
 
-			Velocity = (unsigned int)(pDoc->GetNumCCDRows()*PixelStep*1000 / pDoc->GetHeader()->exposure); //DAVE  - note to self - this is where the magic happens.
+			Velocity = (unsigned int)(pDoc->GetNumCCDRows()*PixelStep*1024 / pDoc->GetHeader()->exposure); //DAVE  - note to self - this is where the magic happens. $$$1000 changed to 1024 for new stage.
 			//
 			pDoc->GetSlide()->SetVelocity(Velocity);
 			//pDoc->GetSlide()->SetVelocity(36000*pDoc->GetHeader()->mag_factor / pDoc->GetHeader()->exposure);
@@ -814,6 +813,15 @@ void CMuCatView::OnRecord()
 			return;
 		CXrayRestartDialog bDlg;
 		bDlg.DoModal();
+		if (bDlg.m_SaveForLater)
+		{
+			strcpy(FileName,(LPCTSTR)FD.GetPathName());
+			DataFile.Open(FileName,CFile::modeWrite|CFile::modeCreate);
+			DataFile.Write(pDoc->GetHeader(),512);
+			DataFile.Close();
+			return;
+		}
+
 		m_XrayPCShutdown = bDlg.m_Shutdown;
 
 			if(bDlg.m_Wait45 && Pause)
@@ -829,6 +837,7 @@ void CMuCatView::OnRecord()
 		DataFile.Write(pDoc->GetHeader(),512);
 
 		MessageBox("Remove Specimen and Switch X-rays on.","Waiting for user action.",MB_ICONEXCLAMATION);
+//dark scan
 		m_IsDark = TRUE;
 		OnScan();
 		GetParent()->GetParent()->UpdateWindow();
@@ -840,12 +849,16 @@ void CMuCatView::OnRecord()
 		pDoc->GetSlide()->SetVelocityFraction(1);
 		pDoc->GetSlide()->Move(0);
 		pDoc->GetSlide()->WaitForStop();
+//light scan - sometimes fails due to laggy shutter - don't save this one
 		Camera.OpenShutter();
-	//MessageBox("Turn shutter on","Waiting for user action.",MB_ICONEXCLAMATION);
 		OnScan();
 		GetParent()->GetParent()->UpdateWindow();
 		UpdateWindow();
-	//	pDoc->GetElevator()->Move((pDoc->GetElevation() + (NumBlocks-1)*ZShift));
+//second light scan - this one should work always
+		OnScan();
+		GetParent()->GetParent()->UpdateWindow();
+		UpdateWindow();
+//save this light scan
 		SaveProjection(DataFile);
 		pDoc->GetElevator()->WaitForStop();
 		DataFile.Close();
@@ -889,6 +902,7 @@ void CMuCatView::OnRecord()
 			MessageBox("Remove Specimen and Switch X-rays on.","Waiting for user action.",MB_ICONEXCLAMATION);
 		else
 			pDoc->GetElevator()->Move(280000);
+//dark scan
 		m_IsDark = TRUE;
 		OnScan();
 		GetParent()->GetParent()->UpdateWindow();
@@ -900,12 +914,15 @@ void CMuCatView::OnRecord()
 		pDoc->GetSlide()->SetVelocityFraction(1);
 		pDoc->GetSlide()->Move(0);
 		pDoc->GetSlide()->WaitForStop();
+//light scan - this can fail due to laggy shutter
 		Camera.OpenShutter();
-	//MessageBox("Turn shutter on","Waiting for user action.",MB_ICONEXCLAMATION);
 		OnScan();
 		GetParent()->GetParent()->UpdateWindow();
 		UpdateWindow();
-	//	pDoc->GetElevator()->Move((pDoc->GetElevation() + (NumBlocks-1)*ZShift));
+//second light scan - will save this one
+		OnScan();
+		GetParent()->GetParent()->UpdateWindow();
+		UpdateWindow();
 		SaveProjection(DataFile);
 		pDoc->GetElevator()->WaitForStop();
 		DataFile.Close();
@@ -936,6 +953,7 @@ void CMuCatView::OnRecord()
 
 			// Dark & I0 scans
 			pDoc->GetElevator()->Move(280000);
+			//dark scan
 			m_IsDark = TRUE;
 			OnScan();
 			GetParent()->GetParent()->UpdateWindow();
@@ -947,12 +965,15 @@ void CMuCatView::OnRecord()
 			pDoc->GetSlide()->SetVelocityFraction(1);
 			pDoc->GetSlide()->Move(0);
 			pDoc->GetSlide()->WaitForStop();
+			//light scan - laggy shutter fail yada yadda
 			Camera.OpenShutter();
-			//MessageBox("Turn shutter on","Waiting for user action.",MB_ICONEXCLAMATION);
 			OnScan();
 			GetParent()->GetParent()->UpdateWindow();
 			UpdateWindow();
-			//	pDoc->GetElevator()->Move((pDoc->GetElevation() + (NumBlocks-1)*ZShift));
+			//second light scan
+			OnScan();
+			GetParent()->GetParent()->UpdateWindow();
+			UpdateWindow();
 			SaveProjection(DataFile);
 			pDoc->GetElevator()->WaitForStop();
 			DataFile.Close();

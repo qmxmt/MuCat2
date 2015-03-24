@@ -70,8 +70,8 @@ int CSI800Camera::InitializeCamera(int index, int baud)
 	error = MapDll();
 	if (error) return error;
 
-	error = (lpCamDLL->lpInstallIsr)(0x80B6,0x10E8,index);	// start the interface
-
+	(lpCamDLL->lpInstallIsr)(0x80B6,0x10E8,index);	// start the interface
+	//if (error) Texit("Failed to start camera interface.");
 	m_IsrActive = TRUE;
 	(lpCamDLL->lpInitCom)(baud,0,8,1,9000);					// setp UART
 	Restart();
@@ -1379,10 +1379,11 @@ void CSI800Camera::GetTempPressure(float *Temperature, float *Pressure)
 void CSI800Camera::Restart(void)
 {
 	C843::Pause(5000);
-	if (!SendCommand('_'))
+	int error;
+	error = SendCommand('_');
+	if (!error);
 		return;
 	(lpCamDLL->lpSendfile)(250, CAMERABINFILE);
-
 }
 
 int CSI800Camera::ImageInternalTDI(void)

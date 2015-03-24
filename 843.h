@@ -6,6 +6,7 @@
 #define ROTATIONAL_DIRECT 3
 #define ROTATIONAL_GEARED 4
 #define ROTATIONAL_PD 5
+#define LINEAR_PD1 6
 
 class C843  
 {

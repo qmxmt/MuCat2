@@ -13,6 +13,7 @@ CXrayRestartDialog::CXrayRestartDialog(CWnd* pParent /*=NULL*/)
 	: CDialog(CXrayRestartDialog::IDD, pParent)
 	, m_Shutdown(FALSE)
 	, m_Wait45(FALSE)
+	, m_SaveForLater(FALSE)
 {
 }
 
@@ -25,6 +26,7 @@ void CXrayRestartDialog::DoDataExchange(CDataExchange* pDX)
 	CDialog::DoDataExchange(pDX);
 	DDX_Check(pDX, IDC_XRAYRESTART, m_Shutdown);
 	DDX_Check(pDX, IDC_WAIT45, m_Wait45);
+	DDX_Check(pDX, IDC_SAVEFORLATER, m_SaveForLater);
 }
 
 

@@ -21,4 +21,5 @@ protected:
 public:
 	BOOL m_Shutdown;
 	BOOL m_Wait45;
+	BOOL m_SaveForLater;
 };

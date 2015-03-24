@@ -82,6 +82,8 @@
 #define IDC_CHECK1                      1078
 #define IDC_WAIT45                      1078
 #define IDC_ROUNDCHECK                  1079
+#define IDC_CHECK2                      1080
+#define IDC_SAVEFORLATER                1080
 #define ID_SCAN                         32771
 #define ID_FOCUS                        32772
 #define ID_STILL                        32773
@@ -111,6 +113,7 @@
 #define ID_BUTTONCENTRE                 32803
 #define ID_SHUTTERBUTTON                32807
 #define ID_CALIBRATE                    32809
+#define ID_PARAMETERS_LOADGEOMETRY      32810
 #define ID_INDICATOR_PROJ               61447
 #define ID_INDICATOR_TEMP               61448
 #define ID_INDICATOR_CURSOR             61449
@@ -127,8 +130,8 @@
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_3D_CONTROLS                     1
 #define _APS_NEXT_RESOURCE_VALUE        149
-#define _APS_NEXT_COMMAND_VALUE         32810
-#define _APS_NEXT_CONTROL_VALUE         1080
+#define _APS_NEXT_COMMAND_VALUE         32811
+#define _APS_NEXT_CONTROL_VALUE         1081
 #define _APS_NEXT_SYMED_VALUE           103
 #endif
 #endif

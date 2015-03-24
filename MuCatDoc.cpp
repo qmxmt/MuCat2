@@ -42,17 +42,19 @@ BEGIN_MESSAGE_MAP(CMuCatDoc, CDocument)
 	ON_COMMAND(ID_EDIT_GEOMETRY, OnEditGeometry)
 	ON_COMMAND(ID_BUTTONDIM, OnButtondim)
 	//}}AFX_MSG_MAP
+	ON_COMMAND(ID_PARAMETERS_LOADGEOMETRY, &CMuCatDoc::OnParametersLoadgeometry)
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////
 // CMuCatDoc construction/destruction
 
-CMuCatDoc::CMuCatDoc():m_Turntable(0,ROTATIONAL_PD),m_Slide(2,LINEAR_PD),
+CMuCatDoc::CMuCatDoc():m_Turntable(0,ROTATIONAL_PD),m_Slide(2,LINEAR_PD1),
 	m_Elevator(1,LINEAR_PD),m_MagnificationSlide(3,LINEAR_PD)
 	, m_SourceToCamera(0)
 	, m_DistanceOffset(0)
 	, m_TDIDelay(0)
 	, m_FewProj(false)
+	, m_CentreOffset(0)
 {
 	// TODO: add one-time construction code here
 	CFile HeaderFile;
@@ -75,7 +77,7 @@ CMuCatDoc::CMuCatDoc():m_Turntable(0,ROTATIONAL_PD),m_Slide(2,LINEAR_PD),
 	FILE *GeoFile;
 	if ((GeoFile = fopen("geometry.txt","r")) == NULL)
 		Texit("Cannot open geometry file 'geometry.txt'");
-	fscanf(GeoFile, "%f %f",&m_SourceToCamera, &m_DistanceOffset);
+	fscanf(GeoFile, "%f %f %d",&m_SourceToCamera, &m_DistanceOffset, &m_CentreOffset);
 	fclose(GeoFile);
 
 }
@@ -524,4 +526,13 @@ int CMuCatDoc::roundUp(int num_proj, int multiple)
 	else
 		return num_proj + multiple - remainder;
 	
+}
+
+void CMuCatDoc::OnParametersLoadgeometry()
+{
+	FILE *GeoFile;
+	if ((GeoFile = fopen("geometry.txt","r")) == NULL)
+		Texit("Cannot open geometry file 'geometry.txt'");
+	fscanf(GeoFile, "%f %f %d",&m_SourceToCamera, &m_DistanceOffset, &m_CentreOffset);
+	fclose(GeoFile);
 }

@@ -17,8 +17,8 @@ void Texit(char *Message);
 #define VERTICAL_MAGNIFICATION 1.0
 #define TOPCROP       200
 
-#define PORT1OFFSET   80
-#define PORT2OFFSET   50
+#define PORT1OFFSET   111
+#define PORT2OFFSET   100
 
 #define ROW_READ_TIME	1.70455		//fastest we can read a row in mS - experimentally determined on 04/11/2010
 class CSI800Camera  

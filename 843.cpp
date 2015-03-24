@@ -24,13 +24,18 @@ C843::C843(int Axis, int Stage)
 		SetPID(200,50,400,400000);
 		m_TopSpeed = 250000;
 		break;
+	case LINEAR_PD1:
+		SetPID(55,50,18,400000);
+		m_TopSpeed = 250000;
+		break;
 	case LINEAR_GEARED:
 		SetPID(250,50,800,2000000);
 		m_TopSpeed = 180000;
 		break;
 	case ROTATIONAL_DIRECT:
 		SetPID(200,50,400,750000);
-		m_TopSpeed = 160000;
+		m_TopSpeed = 120000;
+		setQMC(SET_POSITION_ERROR_LIMIT,m_Axis,50000);
 		break;
 	case ROTATIONAL_PD:
 //		SetPID(510, 500, 400, 1000000);
@@ -78,6 +83,8 @@ void C843::Move(long Position)
 {
 	if (m_StageType == ROTATIONAL_PD)
 		Position *= -5;
+	if (m_StageType == LINEAR_PD1)
+		Position *= 1.024;
 	setQMC(RESET_EVENT_STATUS, m_Axis, 0XF6);
 	setQMC(UPDATE,m_Axis,0);
 	MoveA(m_Axis+1, Position);
@@ -287,6 +294,8 @@ long C843::GetCapturePos()
 	getQMC(GET_CAPTURE_VALUE,m_Axis,&Position);
 	if (m_StageType == ROTATIONAL_PD)
 		Position /= -5;
+	if (m_StageType == LINEAR_PD1)
+		Position /= 1.024;
 	return Position;
 }
 
@@ -296,6 +305,8 @@ long C843::GetPosition()
 	getQMC(GET_ACTUAL_POSITION,m_Axis,&Position);
 	if (m_StageType == ROTATIONAL_PD)
 		Position /= -5;
+	if (m_StageType == LINEAR_PD1)
+		Position /= 1.024;
 	return Position;
 }
 

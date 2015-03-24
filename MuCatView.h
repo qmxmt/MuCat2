@@ -10,7 +10,7 @@
 #endif // _MSC_VER >= 1000
 
 //#define CENTRE_OFFSET 4338  // increase to move object image to right
-#define CENTRE_OFFSET 6700  // March 30 2012 value
+#define CENTRE_OFFSET 10700  // March 30 2012 value
 
 #include <math.h>
 
@@ -64,7 +64,6 @@ protected:
 protected:
 	int m_VerticalPosition;
 	BOOL m_mmUnits;
-	int m_CentreOffset;
 	bool m_IsDark;
 	void SaveProjection(CFile &DataFile);
 	BOOL m_IsRecording;

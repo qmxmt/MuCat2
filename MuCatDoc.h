@@ -112,6 +112,8 @@ public:
 	int roundUp(int num_proj, int multiple);
 	// if TRUE, then we are only doing a few projections, we don't round up and don't do wobble projections either
 	bool m_FewProj;
+	afx_msg void OnParametersLoadgeometry();
+	int m_CentreOffset;
 };
 
 /////////////////////////////////////////////////////////////////////////////
